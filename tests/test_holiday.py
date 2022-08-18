@@ -1,5 +1,5 @@
 from unittest import TestCase
-from feiertage.holiday import get_holiday, DAY_OF_WEEK, day_of_week
+from holiday import get_holiday, DAY_OF_WEEK, day_of_week
 
 
 class Test(TestCase):
@@ -9,7 +9,7 @@ class Test(TestCase):
 
     def test_get_holiday_neg(self):
         with self.assertRaises(RuntimeError):
-            f = get_holiday(2022, "aa")
+            get_holiday(2022, "aa")
 
     def test_day_of_week(self):
         assert day_of_week('2022-08-14') == DAY_OF_WEEK['SONNTAG']
